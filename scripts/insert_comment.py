@@ -1,6 +1,9 @@
+# scripts/insert_comment.py
 import os
+import sys
 import datetime
 from git import Repo
+from pathlib import Path
 
 REPO = Repo(".")
 USERNAME = os.getenv("GITHUB_ACTOR", "unknown-user")
@@ -8,7 +11,7 @@ DATE_STR = datetime.datetime.now().strftime("%Y-%m-%d")
 LAST_COMMIT_MSG = REPO.head.commit.message.strip().replace('\n', ' ')
 HISTORY_LINE = f"// @history : {DATE_STR} {LAST_COMMIT_MSG}\n"
 
-def insert_or_update_comment(file_path):
+def insert_or_update_comment(file_path: Path):
     with open(file_path, 'r', encoding='utf-8') as f:
         lines = f.readlines()
 
@@ -36,13 +39,19 @@ def insert_or_update_comment(file_path):
         with open(file_path, 'w', encoding='utf-8') as f:
             f.writelines(lines)
 
-def walk_cpp_files():
-    for root, _, files in os.walk("."):
-        if ".git" in root:
-            continue
-        for file in files:
-            if file.endswith(".cpp") or file.endswith(".h"):
-                insert_or_update_comment(os.path.join(root, file))
+def main():
+    if len(sys.argv) < 2:
+        print("Usage: python insert_comment.py <changed_files.txt>")
+        sys.exit(1)
+
+    changed_files_path = sys.argv[1]
+    with open(changed_files_path, 'r', encoding='utf-8') as f:
+        files = [line.strip() for line in f.readlines()]
+
+    for file in files:
+        path = Path(file)
+        if path.suffix in ['.cpp', '.h'] and path.exists():
+            insert_or_update_comment(path)
 
 if __name__ == "__main__":
-    walk_cpp_files()
+    main()

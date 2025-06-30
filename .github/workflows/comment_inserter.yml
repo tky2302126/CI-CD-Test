@@ -17,10 +17,21 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Run comment inserter
+      - name: Install dependencies
         run: |
           pip install GitPython
-          python scripts/insert_comment.py
+
+      - name: Get list of changed files
+        id: changed
+        run: |
+          git fetch origin master
+          git diff --name-only HEAD^ HEAD > changed_files.txt # 変更のあった部分をファイルで保存
+          echo "Changed files:"
+          cat changed_files.txt
+
+      - name: Run comment inserter on changed files
+        run: |
+          python scripts/insert_comment.py changed_files.txt
 
       - name: Commit and push changes
         run: |
