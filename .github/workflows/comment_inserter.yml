@@ -1,0 +1,30 @@
+name: Insert Comment on Push
+
+on:
+  push:
+    branches:
+      - main  # または任意のブランチ名
+
+jobs:
+  insert-comment:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Run comment inserter
+        run: |
+          pip install GitPython
+          python scripts/insert_comment.py
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add .
+          git diff --cached --quiet || (git commit -m "Auto-insert author/date/history comments" && git push)
