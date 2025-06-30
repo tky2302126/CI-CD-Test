@@ -3,7 +3,7 @@ name: Insert Comment on Push
 on:
   push:
     branches:
-      - main  # または任意のブランチ名
+      - master  # または任意のブランチ名
 
 jobs:
   insert-comment:
