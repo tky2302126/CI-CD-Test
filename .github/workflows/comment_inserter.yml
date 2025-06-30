@@ -28,7 +28,7 @@ jobs:
       - name: Check if there are changed files
         id: check_changes
         run: |
-      	  echo "⚠️ No changed files detected. Skipping comment insertion."
+          echo "⚠️ No changed files detected. Skipping comment insertion."
           if [ ! -s changed_files.txt ]; then
             echo "skip=true" >> $GITHUB_OUTPUT
           else
