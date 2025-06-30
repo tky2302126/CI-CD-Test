@@ -21,30 +21,31 @@ jobs:
         run: |
           pip install GitPython
 
+      - name: Get changed files
+        run: |
+          git diff-tree --no-commit-id --name-only -r HEAD > changed_files.txt
+
       - name: Check if there are changed files
         id: check_changes
         run: |
-    	  if [ ! -s changed_files.txt ]; then
       	    echo "⚠️ No changed files detected. Skipping comment insertion."
-      	    echo "skip=true" >> $GITHUB_OUTPUT
+          if [ ! -s changed_files.txt ]; then
+            echo "skip=true" >> $GITHUB_OUTPUT
           else
             echo "skip=false" >> $GITHUB_OUTPUT
           fi
 
+      - name: Warn when no changed files
+        if: steps.check_changes.outputs.skip == 'true'
+        run: echo "::warning::No files changed. Nothing to process."
 
-      - name: Get list of changed files
-        id: changed
-        run: |
-          git fetch origin master
-          git diff --name-only HEAD^ HEAD > changed_files.txt # 変更のあった部分をファイルで保存
-          echo "Changed files:"
-          cat changed_files.txt
-
-      - name: Run comment inserter on changed files
+      - name: Insert comment only in changed files
+        if: steps.check_changes.outputs.skip == 'false'
         run: |
           python scripts/insert_comment.py changed_files.txt
 
       - name: Commit and push changes
+        if: steps.check_changes.outputs.skip == 'false'
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
