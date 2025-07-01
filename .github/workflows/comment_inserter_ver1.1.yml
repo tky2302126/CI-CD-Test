@@ -54,7 +54,7 @@ jobs:
       - name: Insert comment only in changed files
         if: steps.check_changes.outputs.skip == 'false'
         run: |
-          python scripts/insert_comment.py changed_files.txt "${{ steps.extract_user.outputs.username }}"
+          python scripts/insert_comment_ver1.1.py changed_files.txt "${{ steps.extract_user.outputs.username }}"
 
       - name: Commit and push changes
         if: steps.check_changes.outputs.skip == 'false'
