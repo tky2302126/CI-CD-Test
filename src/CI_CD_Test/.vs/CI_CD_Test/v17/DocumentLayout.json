@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\CI_CD_Test\\src\\CI_CD_Test\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{0FD2812B-C817-47B3-AB62-25E30A0B15C9}|CI_CD_Test\\CI_CD_Test.vcxproj|D:\\CI_CD_Test\\src\\CI_CD_Test\\CI_CD_Test\\test4.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0FD2812B-C817-47B3-AB62-25E30A0B15C9}|CI_CD_Test\\CI_CD_Test.vcxproj|solutionrelative:CI_CD_Test\\test4.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0FD2812B-C817-47B3-AB62-25E30A0B15C9}|CI_CD_Test\\CI_CD_Test.vcxproj|D:\\CI_CD_Test\\src\\CI_CD_Test\\CI_CD_Test\\test3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{0FD2812B-C817-47B3-AB62-25E30A0B15C9}|CI_CD_Test\\CI_CD_Test.vcxproj|solutionrelative:CI_CD_Test\\test3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -35,6 +39,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "test4.cpp",
+              "DocumentMoniker": "D:\\CI_CD_Test\\src\\CI_CD_Test\\CI_CD_Test\\test4.cpp",
+              "RelativeDocumentMoniker": "CI_CD_Test\\test4.cpp",
+              "ToolTip": "D:\\CI_CD_Test\\src\\CI_CD_Test\\CI_CD_Test\\test4.cpp",
+              "RelativeToolTip": "CI_CD_Test\\test4.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-07-01T01:58:36.167Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "test3.cpp",
               "DocumentMoniker": "D:\\CI_CD_Test\\src\\CI_CD_Test\\CI_CD_Test\\test3.cpp",
               "RelativeDocumentMoniker": "CI_CD_Test\\test3.cpp",
@@ -47,7 +64,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "test2.cpp",
               "DocumentMoniker": "D:\\CI_CD_Test\\src\\CI_CD_Test\\CI_CD_Test\\test2.cpp",
               "RelativeDocumentMoniker": "CI_CD_Test\\test2.cpp",
@@ -55,12 +72,11 @@
               "RelativeToolTip": "CI_CD_Test\\test2.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-07-01T01:19:26.654Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-01T01:19:26.654Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "test.cpp",
               "DocumentMoniker": "D:\\CI_CD_Test\\src\\CI_CD_Test\\CI_CD_Test\\test.cpp",
               "RelativeDocumentMoniker": "CI_CD_Test\\test.cpp",
@@ -72,7 +88,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "testHeader.h",
               "DocumentMoniker": "D:\\CI_CD_Test\\src\\CI_CD_Test\\CI_CD_Test\\testHeader.h",
               "RelativeDocumentMoniker": "CI_CD_Test\\testHeader.h",
@@ -84,7 +100,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "main.cpp",
               "DocumentMoniker": "D:\\CI_CD_Test\\src\\CI_CD_Test\\CI_CD_Test\\main.cpp",
               "RelativeDocumentMoniker": "CI_CD_Test\\main.cpp",
