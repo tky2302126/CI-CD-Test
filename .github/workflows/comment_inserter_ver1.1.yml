@@ -33,7 +33,7 @@ jobs:
             git diff --name-only ${{ github.event.before }} ${{ github.sha }} > changed_files.txt
           fi
 
-      - name: Debug: print changed files
+      - name: print changed files
         run: cat changed_files.txt
 
       - name: Check if there are changed files
