@@ -1,14 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\git\\CD-test\\CI-CD-Test\\src\\CI_CD_Test\\",
+  "WorkspaceRootPath": "D:\\CI_CD_Test\\src\\CI_CD_Test\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0FD2812B-C817-47B3-AB62-25E30A0B15C9}|CI_CD_Test\\CI_CD_Test.vcxproj|D:\\git\\CD-test\\CI-CD-Test\\src\\CI_CD_Test\\CI_CD_Test\\testHeader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{0FD2812B-C817-47B3-AB62-25E30A0B15C9}|CI_CD_Test\\CI_CD_Test.vcxproj|solutionrelative:CI_CD_Test\\testHeader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{0FD2812B-C817-47B3-AB62-25E30A0B15C9}|CI_CD_Test\\CI_CD_Test.vcxproj|D:\\CI_CD_Test\\src\\CI_CD_Test\\CI_CD_Test\\test.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0FD2812B-C817-47B3-AB62-25E30A0B15C9}|CI_CD_Test\\CI_CD_Test.vcxproj|solutionrelative:CI_CD_Test\\test.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0FD2812B-C817-47B3-AB62-25E30A0B15C9}|CI_CD_Test\\CI_CD_Test.vcxproj|D:\\git\\CD-test\\CI-CD-Test\\src\\CI_CD_Test\\CI_CD_Test\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{0FD2812B-C817-47B3-AB62-25E30A0B15C9}|CI_CD_Test\\CI_CD_Test.vcxproj|D:\\CI_CD_Test\\src\\CI_CD_Test\\CI_CD_Test\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{0FD2812B-C817-47B3-AB62-25E30A0B15C9}|CI_CD_Test\\CI_CD_Test.vcxproj|solutionrelative:CI_CD_Test\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FD2812B-C817-47B3-AB62-25E30A0B15C9}|CI_CD_Test\\CI_CD_Test.vcxproj|D:\\CI_CD_Test\\src\\CI_CD_Test\\CI_CD_Test\\testHeader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0FD2812B-C817-47B3-AB62-25E30A0B15C9}|CI_CD_Test\\CI_CD_Test.vcxproj|solutionrelative:CI_CD_Test\\testHeader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,19 +22,28 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "test.cpp",
+              "DocumentMoniker": "D:\\CI_CD_Test\\src\\CI_CD_Test\\CI_CD_Test\\test.cpp",
+              "RelativeDocumentMoniker": "CI_CD_Test\\test.cpp",
+              "ToolTip": "D:\\CI_CD_Test\\src\\CI_CD_Test\\CI_CD_Test\\test.cpp",
+              "RelativeToolTip": "CI_CD_Test\\test.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-07-01T01:13:52.675Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "testHeader.h",
-              "DocumentMoniker": "D:\\git\\CD-test\\CI-CD-Test\\src\\CI_CD_Test\\CI_CD_Test\\testHeader.h",
+              "DocumentMoniker": "D:\\CI_CD_Test\\src\\CI_CD_Test\\CI_CD_Test\\testHeader.h",
               "RelativeDocumentMoniker": "CI_CD_Test\\testHeader.h",
-              "ToolTip": "D:\\git\\CD-test\\CI-CD-Test\\src\\CI_CD_Test\\CI_CD_Test\\testHeader.h",
+              "ToolTip": "D:\\CI_CD_Test\\src\\CI_CD_Test\\CI_CD_Test\\testHeader.h",
               "RelativeToolTip": "CI_CD_Test\\testHeader.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
@@ -41,9 +54,9 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "main.cpp",
-              "DocumentMoniker": "D:\\git\\CD-test\\CI-CD-Test\\src\\CI_CD_Test\\CI_CD_Test\\main.cpp",
+              "DocumentMoniker": "D:\\CI_CD_Test\\src\\CI_CD_Test\\CI_CD_Test\\main.cpp",
               "RelativeDocumentMoniker": "CI_CD_Test\\main.cpp",
-              "ToolTip": "D:\\git\\CD-test\\CI-CD-Test\\src\\CI_CD_Test\\CI_CD_Test\\main.cpp",
+              "ToolTip": "D:\\CI_CD_Test\\src\\CI_CD_Test\\CI_CD_Test\\main.cpp",
               "RelativeToolTip": "CI_CD_Test\\main.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",

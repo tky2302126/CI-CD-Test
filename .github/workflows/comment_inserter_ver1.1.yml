@@ -1,0 +1,65 @@
+name: Insert Comment on Push
+
+on:
+  push:
+    branches:
+      - 'develop'
+      - 'develop/**'  # develop/username のような形式も含める
+
+jobs:
+  insert-comment:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          pip install GitPython
+
+      - name: Get changed files
+        run: |
+          git diff-tree --no-commit-id --name-only -r HEAD > changed_files.txt
+
+      - name: Check if there are changed files
+        id: check_changes
+        run: |
+          echo "⚠️ No changed files detected. Skipping comment insertion."
+          if [ ! -s changed_files.txt ]; then
+            echo "skip=true" >> $GITHUB_OUTPUT
+          else
+            echo "skip=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Extract username from branch
+        id: extract_user
+        run: |
+          BRANCH_NAME="${GITHUB_REF#refs/heads/}"
+          if [[ "$BRANCH_NAME" == develop/* ]]; then
+            USERNAME="${BRANCH_NAME#develop/}"
+          else
+            USERNAME="unknown"
+          fi
+          echo "username=$USERNAME" >> $GITHUB_OUTPUT
+
+      - name: Warn when no changed files
+        if: steps.check_changes.outputs.skip == 'true'
+        run: echo "::warning::No files changed. Nothing to process."
+
+      - name: Insert comment only in changed files
+        if: steps.check_changes.outputs.skip == 'false'
+        run: |
+          python scripts/insert_comment.py changed_files.txt "${{ steps.extract_user.outputs.username }}"
+
+      - name: Commit and push changes
+        if: steps.check_changes.outputs.skip == 'false'
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add .
+          git diff --cached --quiet || (git commit -m "Auto-insert author/date/history comments" && git push)
