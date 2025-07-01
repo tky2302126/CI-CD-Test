@@ -1,1 +1,12 @@
-.github/workflows/comment_inserter_ver1.1.yml
+src/CI_CD_Test/.vs/CI_CD_Test/FileContentIndex/51f88b2e-6320-48b0-bb4e-adaac69204d2.vsidx
+src/CI_CD_Test/.vs/CI_CD_Test/FileContentIndex/67458b85-5549-4852-bcab-3003552ccd97.vsidx
+src/CI_CD_Test/.vs/CI_CD_Test/FileContentIndex/73dd460a-fe72-42e1-aeab-97bb374d6094.vsidx
+src/CI_CD_Test/.vs/CI_CD_Test/FileContentIndex/85e2ee5e-d82b-45af-8c0d-a6710be61742.vsidx
+src/CI_CD_Test/.vs/CI_CD_Test/FileContentIndex/914dd8ca-9a61-4ec5-9a4b-6aff2a9469f9.vsidx
+src/CI_CD_Test/.vs/CI_CD_Test/v17/.suo
+src/CI_CD_Test/.vs/CI_CD_Test/v17/Browse.VC.db
+src/CI_CD_Test/.vs/CI_CD_Test/v17/DocumentLayout.backup.json
+src/CI_CD_Test/.vs/CI_CD_Test/v17/DocumentLayout.json
+src/CI_CD_Test/CI_CD_Test/CI_CD_Test.vcxproj
+src/CI_CD_Test/CI_CD_Test/CI_CD_Test.vcxproj.filters
+src/CI_CD_Test/CI_CD_Test/test4.cpp
