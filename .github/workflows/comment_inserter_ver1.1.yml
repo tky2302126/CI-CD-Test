@@ -12,6 +12,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # 差分取得のためにフル履歴を取得
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -24,7 +26,15 @@ jobs:
 
       - name: Get changed files
         run: |
-          git diff-tree --no-commit-id --name-only -r HEAD > changed_files.txt
+          if [ "${{ github.event.before }}" = "0000000000000000000000000000000000000000" ]; then
+            echo "Initial push detected. Using 'git show'."
+            git show --pretty="" --name-only ${{ github.sha }} > changed_files.txt
+          else
+            git diff --name-only ${{ github.event.before }} ${{ github.sha }} > changed_files.txt
+          fi
+
+      - name: Debug: print changed files
+        run: cat changed_files.txt
 
       - name: Check if there are changed files
         id: check_changes
